@@ -1,8 +1,8 @@
 import base64
 
 # Specify the file paths
-exe_path = r"C:\Users\Admin\Downloads\Art3misRAT.exe"
-output_path = r"C:\Users\Admin\OneDrive - UT Health San Antonio\Desktop\rat_encoded.txt"
+exe_path = r"C:\Users\path_to_file.exe"
+output_path = r"C:\Users\path_to_file.txt"
 
 # Read the executable and encode it in base64
 with open(exe_path, "rb") as exe_file:
